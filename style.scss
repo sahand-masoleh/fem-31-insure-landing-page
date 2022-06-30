@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+@mixin f-head-400 {
+	font-family: "DM Serif Display", serif;
+	font-weight: 400;
+}
+@mixin f-body-400 {
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+}
+@mixin f-body-700 {
+	font-family: "Karla", sans-serif;
+	font-weight: 700;
+}
+
+// ### Primary
+$c-p-dark-violet: hsl(256, 26%, 20%);
+$c-p-grayish-blue: hsl(216, 30%, 68%);
+
+//-###-neutral
+$c-n-very-dark-violet: hsl(270, 9%, 17%);
+$c-n-dark-grayish-violet: hsl(273, 4%, 51%);
+$c-n-very-light-gray: hsl(0, 0%, 98%);
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Karla", sans-serif;
+}
