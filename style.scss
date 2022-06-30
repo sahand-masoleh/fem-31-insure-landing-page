@@ -14,8 +14,8 @@
 }
 
 // ### Primary
-$c-p-dark-violet: hsl(256, 26%, 20%);
-$c-p-grayish-blue: hsl(216, 30%, 68%);
+$bg-dark-violet: hsl(256, 26%, 20%);
+$bg-grayish-blue: hsl(216, 30%, 68%);
 
 //-###-neutral
 $fc-very-dark-violet: hsl(270, 9%, 17%);
@@ -30,11 +30,11 @@ $gap-3: min(15vw, 3rem);
 $gap-5: min(25vw, 5rem);
 
 $fs-xxl: 2.8rem;
-$fs-xl: 2rem;
+$fs-xl: 1.8rem;
 $fs-l: 1.2rem;
 $fs-m: 1rem;
-$fs-s: 0.8rem;
-$fs-xs: 0.6rem;
+// $fs-s: 0.8rem;
+// $fs-xs: 0.6rem;
 
 *,
 *::after,
@@ -75,11 +75,11 @@ img {
 		z-index: 1000;
 		background-color: $fc-very-dark-violet;
 		width: 100%;
-		padding: $gap-2 $gap-1-5;
+		padding: $gap-3 $gap-1-5;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: $gap-1-5;
+		gap: $gap-3;
 
 		&-button {
 			border: 2px solid currentcolor;
@@ -89,7 +89,6 @@ img {
 			padding: 1.5ch 3ch;
 			text-transform: uppercase;
 			letter-spacing: 0.2ch;
-			margin: 1rem auto 0 auto;
 			cursor: pointer;
 		}
 
@@ -99,10 +98,10 @@ img {
 	}
 
 	&__item {
-		@include f-body-400;
+		@include f-body-700;
+		font-size: $fs-l;
 		text-transform: uppercase;
 		color: $fc-very-light-gray;
-		font-size: $fs-l;
 		list-style: none;
 	}
 }
@@ -110,11 +109,12 @@ img {
 main {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: $gap-5;
 }
 
 .intro {
-	background-color: $c-p-dark-violet;
+	background-color: $bg-dark-violet;
 
 	&__picture {
 		position: relative;
@@ -133,6 +133,7 @@ main {
 		padding: $gap-5 $gap-1-5;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: $gap-1;
 		position: relative;
 
@@ -173,5 +174,50 @@ main {
 		letter-spacing: 0.2ch;
 		margin: 1rem auto 0 auto;
 		cursor: pointer;
+	}
+}
+
+.content {
+	padding: $gap-3 $gap-1-5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: $gap-3;
+	position: relative;
+
+	&__title {
+		@include f-head-400;
+		color: $fc-very-dark-violet;
+		font-size: $fs-xxl;
+	}
+
+	.feature {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: $gap-1-5;
+
+		&__title {
+			@include f-head-400;
+			color: $fc-very-dark-violet;
+			font-size: $fs-xl;
+		}
+
+		&__text {
+			@include f-body-400;
+			color: $fc-dark-grayish-violet;
+			font-size: $fs-m;
+			line-height: 3ch;
+			text-align: center;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 50%;
+		top: 0;
+		background-color: $bg-grayish-blue;
 	}
 }

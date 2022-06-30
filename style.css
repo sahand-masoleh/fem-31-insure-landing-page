@@ -37,11 +37,11 @@ img {
   z-index: 1000;
   background-color: hsl(270deg, 9%, 17%);
   width: 100%;
-  padding: min(10vw, 2rem) min(7vw, 1.5rem);
+  padding: min(15vw, 3rem) min(7vw, 1.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: min(7vw, 1.5rem);
+  gap: min(15vw, 3rem);
   background-image: url(./images/bg-pattern-mobile-nav.svg);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -54,21 +54,21 @@ img {
   padding: 1.5ch 3ch;
   text-transform: uppercase;
   letter-spacing: 0.2ch;
-  margin: 1rem auto 0 auto;
   cursor: pointer;
 }
 .nav__item {
   font-family: "Karla", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: hsl(0deg, 0%, 98%);
-  font-size: 1.2rem;
   list-style: none;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: min(25vw, 5rem);
 }
 
@@ -94,6 +94,7 @@ main {
   padding: min(25vw, 5rem) min(7vw, 1.5rem);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: min(5vw, 1rem);
   position: relative;
 }
@@ -139,4 +140,47 @@ main {
   letter-spacing: 0.2ch;
   margin: 1rem auto 0 auto;
   cursor: pointer;
+}
+
+.content {
+  padding: min(15vw, 3rem) min(7vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(15vw, 3rem);
+  position: relative;
+}
+.content__title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  color: hsl(270deg, 9%, 17%);
+  font-size: 2.8rem;
+}
+.content .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(7vw, 1.5rem);
+}
+.content .feature__title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  color: hsl(270deg, 9%, 17%);
+  font-size: 1.8rem;
+}
+.content .feature__text {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  color: hsl(273deg, 4%, 51%);
+  font-size: 1rem;
+  line-height: 3ch;
+  text-align: center;
+}
+.content::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 50%;
+  top: 0;
+  background-color: hsl(216deg, 30%, 68%);
 }/*# sourceMappingURL=style.css.map */
