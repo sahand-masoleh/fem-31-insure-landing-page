@@ -33,12 +33,14 @@ $gap-2: 2rem;
 $gap-3: 3rem;
 $gap-5: 5rem;
 
+$fs-xxxl: clamp(2.8rem, 5vw, 4.4rem);
 $fs-xxl: 2.8rem;
 $fs-xl: 1.8rem;
 $fs-l: 1.2rem;
 $fs-m: 1rem;
 $fs-s: 0.9rem;
-// $fs-xs: 0.6rem;
+
+$max-width: 70rem;
 
 *,
 *::after,
@@ -57,8 +59,13 @@ img {
 	display: none !important;
 }
 
-.nav {
+.nav-container {
 	padding: 0 $gap-1-5;
+}
+
+.nav {
+	max-width: $max-width;
+	margin: 0 auto;
 	height: 5rem;
 	display: flex;
 	align-items: center;
@@ -115,11 +122,54 @@ main {
 	margin-bottom: $gap-5;
 }
 
-.intro {
+.intro-container {
 	background-color: $bg-dark-violet;
+	width: 100%;
+
+	@media screen and (min-width: 640px) {
+		height: 40rem;
+		padding: 10rem $gap-1-5 0 $gap-1-5;
+		margin-bottom: 10rem;
+		position: relative;
+	}
+
+	&::after {
+		@media screen and (min-width: 640px) {
+			position: absolute;
+			content: url(./images/bg-pattern-intro-right-desktop.svg);
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&::before {
+		@media screen and (min-width: 640px) {
+			position: absolute;
+			content: url(./images/bg-pattern-intro-left-desktop.svg);
+			bottom: -20rem;
+			left: 0;
+		}
+	}
+}
+
+.intro {
+	max-width: $max-width;
+	margin: 0 auto;
+
+	@media screen and (min-width: 640px) {
+		display: flex;
+		flex-direction: row-reverse;
+		position: relative;
+	}
 
 	&__picture-container {
 		height: 30rem;
+
+		@media screen and (min-width: 640px) {
+			width: 50%;
+			height: 40rem;
+			margin-bottom: -10rem;
+		}
 	}
 
 	&__picture {
@@ -138,6 +188,10 @@ main {
 			height: min-content;
 			top: 100%;
 			left: 0;
+
+			@media screen and (min-width: 640px) {
+				all: unset;
+			}
 		}
 	}
 
@@ -147,6 +201,13 @@ main {
 		gap: $gap-1;
 		position: relative;
 
+		@media screen and (min-width: 640px) {
+			width: 50%;
+			padding: 0 $gap-1-5;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
 		&::after {
 			position: absolute;
 			content: url(./images/bg-pattern-intro-right-mobile.svg);
@@ -154,6 +215,10 @@ main {
 			height: min-content;
 			bottom: -12rem;
 			right: 0;
+
+			@media screen and (min-width: 640px) {
+				all: unset;
+			}
 		}
 	}
 
@@ -163,6 +228,11 @@ main {
 		color: $fc-very-light-gray;
 		text-align: center;
 		line-height: 2ch;
+
+		@media screen and (min-width: 640px) {
+			text-align: left;
+			font-size: $fs-xxxl;
+		}
 	}
 
 	&__paragraph {
@@ -171,6 +241,10 @@ main {
 		color: $fc-very-light-gray;
 		text-align: center;
 		line-height: 2.5ch;
+
+		@media screen and (min-width: 640px) {
+			text-align: left;
+		}
 	}
 
 	&__button {
@@ -182,8 +256,13 @@ main {
 		color: $fc-very-light-gray;
 		text-transform: uppercase;
 		letter-spacing: 0.2ch;
-		margin: 1rem auto 0 auto;
+		margin-top: 1rem;
 		cursor: pointer;
+
+		&:hover {
+			color: $bg-dark-violet;
+			background-color: $fc-very-light-gray;
+		}
 	}
 }
 

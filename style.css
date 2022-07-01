@@ -16,8 +16,13 @@ img {
   display: none !important;
 }
 
-.nav {
+.nav-container {
   padding: 0 1.5rem;
+}
+
+.nav {
+  max-width: 70rem;
+  margin: 0 auto;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -74,11 +79,55 @@ main {
   margin-bottom: 5rem;
 }
 
-.intro {
+.intro-container {
   background-color: hsl(256deg, 26%, 20%);
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .intro-container {
+    height: 40rem;
+    padding: 10rem 1.5rem 0 1.5rem;
+    margin-bottom: 10rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 640px) {
+  .intro-container::after {
+    position: absolute;
+    content: url(./images/bg-pattern-intro-right-desktop.svg);
+    top: 0;
+    right: 0;
+  }
+}
+@media screen and (min-width: 640px) {
+  .intro-container::before {
+    position: absolute;
+    content: url(./images/bg-pattern-intro-left-desktop.svg);
+    bottom: -20rem;
+    left: 0;
+  }
+}
+
+.intro {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 640px) {
+  .intro {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
 }
 .intro__picture-container {
   height: 30rem;
+}
+@media screen and (min-width: 640px) {
+  .intro__picture-container {
+    width: 50%;
+    height: 40rem;
+    margin-bottom: -10rem;
+  }
 }
 .intro__picture {
   position: relative;
@@ -101,6 +150,11 @@ main {
   top: 100%;
   left: 0;
 }
+@media screen and (min-width: 640px) {
+  .intro__picture::after {
+    all: unset;
+  }
+}
 .intro__text {
   padding: 5rem 1.5rem;
   display: flex;
@@ -108,6 +162,14 @@ main {
   align-items: center;
   gap: 1rem;
   position: relative;
+}
+@media screen and (min-width: 640px) {
+  .intro__text {
+    width: 50%;
+    padding: 0 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
 .intro__text::after {
   position: absolute;
@@ -121,6 +183,11 @@ main {
   bottom: -12rem;
   right: 0;
 }
+@media screen and (min-width: 640px) {
+  .intro__text::after {
+    all: unset;
+  }
+}
 .intro__title {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -129,6 +196,12 @@ main {
   text-align: center;
   line-height: 2ch;
 }
+@media screen and (min-width: 640px) {
+  .intro__title {
+    text-align: left;
+    font-size: clamp(2.8rem, 5vw, 4.4rem);
+  }
+}
 .intro__paragraph {
   font-family: "Karla", sans-serif;
   font-weight: 400;
@@ -136,6 +209,11 @@ main {
   color: hsl(0deg, 0%, 98%);
   text-align: center;
   line-height: 2.5ch;
+}
+@media screen and (min-width: 640px) {
+  .intro__paragraph {
+    text-align: left;
+  }
 }
 .intro__button {
   border: 2px solid currentcolor;
@@ -149,8 +227,12 @@ main {
   color: hsl(0deg, 0%, 98%);
   text-transform: uppercase;
   letter-spacing: 0.2ch;
-  margin: 1rem auto 0 auto;
+  margin-top: 1rem;
   cursor: pointer;
+}
+.intro__button:hover {
+  color: hsl(256deg, 26%, 20%);
+  background-color: hsl(0deg, 0%, 98%);
 }
 
 .content {
