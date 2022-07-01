@@ -12,6 +12,11 @@
 	font-family: "Karla", sans-serif;
 	font-weight: 700;
 }
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 // ### Primary
 $bg-dark-violet: hsl(256, 26%, 20%);
@@ -33,7 +38,7 @@ $fs-xxl: 2.8rem;
 $fs-xl: 1.8rem;
 $fs-l: 1.2rem;
 $fs-m: 1rem;
-// $fs-s: 0.8rem;
+$fs-s: 0.9rem;
 // $fs-xs: 0.6rem;
 
 *,
@@ -76,9 +81,7 @@ img {
 		background-color: $fc-very-dark-violet;
 		width: 100%;
 		padding: $gap-3 $gap-1-5;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flex-column-center;
 		gap: $gap-3;
 
 		&-button {
@@ -107,10 +110,9 @@ img {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex-column-center;
 	gap: $gap-5;
+	margin-bottom: $gap-5;
 }
 
 .intro {
@@ -131,9 +133,7 @@ main {
 
 	&__text {
 		padding: $gap-5 $gap-1-5;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flex-column-center;
 		gap: $gap-1;
 		position: relative;
 
@@ -179,9 +179,7 @@ main {
 
 .content {
 	padding: $gap-3 $gap-1-5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex-column-center;
 	gap: $gap-3;
 	position: relative;
 
@@ -192,9 +190,7 @@ main {
 	}
 
 	.feature {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flex-column-center;
 		gap: $gap-1-5;
 
 		&__title {
@@ -225,9 +221,7 @@ main {
 .cta {
 	background-color: $bg-dark-violet;
 	padding: $gap-5 $gap-1-5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex-column-center;
 	gap: $gap-2;
 	position: relative;
 	background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
@@ -253,5 +247,63 @@ main {
 		letter-spacing: 0.2ch;
 		margin: 1rem auto 0 auto;
 		cursor: pointer;
+	}
+}
+
+.footer {
+	padding: $gap-5 $gap-1-5;
+	background-color: $fc-very-light-gray;
+	background-image: url(./images/bg-pattern-footer-mobile.svg);
+	background-position: top;
+	background-repeat: no-repeat;
+	@include flex-column-center;
+	gap: $gap-1-5;
+
+	&__top {
+		@include flex-column-center;
+		gap: $gap-1-5;
+	}
+
+	&__socials {
+		display: flex;
+		gap: $gap-1;
+	}
+
+	&__divider {
+		all: unset;
+		width: 100%;
+		border: 1px solid $bg-grayish-blue;
+		border-right: none;
+		border-bottom: none;
+	}
+
+	&__list {
+		@include flex-column-center;
+		gap: $gap-1;
+		margin-bottom: $gap-3;
+	}
+
+	&__item {
+		@include f-body-700;
+		font-size: $fs-s;
+		text-transform: uppercase;
+		list-style: none;
+
+		&:nth-of-type(1) {
+			color: $fc-dark-grayish-violet;
+			margin-bottom: $gap-1-5;
+		}
+	}
+
+	&__attribution {
+		@include f-body-400;
+		color: $fc-dark-grayish-violet;
+		font-size: $fs-s;
+		text-align: center;
+
+		& > a {
+			@include f-body-700;
+			color: $fc-dark-grayish-violet;
+		}
 	}
 }

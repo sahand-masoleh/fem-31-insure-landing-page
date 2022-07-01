@@ -70,6 +70,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: min(25vw, 5rem);
+  margin-bottom: min(25vw, 5rem);
 }
 
 .intro {
@@ -219,4 +220,63 @@ main {
   letter-spacing: 0.2ch;
   margin: 1rem auto 0 auto;
   cursor: pointer;
+}
+
+.footer {
+  padding: min(25vw, 5rem) min(7vw, 1.5rem);
+  background-color: hsl(0deg, 0%, 98%);
+  background-image: url(./images/bg-pattern-footer-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(7vw, 1.5rem);
+}
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(7vw, 1.5rem);
+}
+.footer__socials {
+  display: flex;
+  gap: min(5vw, 1rem);
+}
+.footer__divider {
+  all: unset;
+  width: 100%;
+  border: 1px solid hsl(216deg, 30%, 68%);
+  border-right: none;
+  border-bottom: none;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(5vw, 1rem);
+  margin-bottom: min(15vw, 3rem);
+}
+.footer__item {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  list-style: none;
+}
+.footer__item:nth-of-type(1) {
+  color: hsl(273deg, 4%, 51%);
+  margin-bottom: min(7vw, 1.5rem);
+}
+.footer__attribution {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  color: hsl(273deg, 4%, 51%);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.footer__attribution > a {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  color: hsl(273deg, 4%, 51%);
 }/*# sourceMappingURL=style.css.map */
