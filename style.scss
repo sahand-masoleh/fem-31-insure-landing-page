@@ -352,6 +352,15 @@ main {
 	background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
 	background-repeat: no-repeat;
 	background-position: top right;
+	max-width: $max-width;
+	width: 100%;
+
+	@media screen and (min-width: 640px) {
+		background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+		flex-direction: row;
+		justify-content: space-between;
+		padding: $gap-5;
+	}
 
 	&__title {
 		@include f-head-400;
@@ -359,6 +368,11 @@ main {
 		font-size: $fs-xxl;
 		text-align: center;
 		line-height: 2ch;
+
+		@media screen and (min-width: 640px) {
+			text-align: left;
+			max-width: 50%;
+		}
 	}
 
 	&__button {
@@ -370,8 +384,13 @@ main {
 		color: $fc-very-light-gray;
 		text-transform: uppercase;
 		letter-spacing: 0.2ch;
-		margin: 1rem auto 0 auto;
+		margin-top: 1rem;
 		cursor: pointer;
+
+		&:hover {
+			color: $bg-dark-violet;
+			background-color: $fc-very-light-gray;
+		}
 	}
 }
 

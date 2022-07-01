@@ -331,6 +331,16 @@ main {
   background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
+  max-width: 70rem;
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .cta {
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem;
+  }
 }
 .cta__title {
   font-family: "DM Serif Display", serif;
@@ -339,6 +349,12 @@ main {
   font-size: 2.8rem;
   text-align: center;
   line-height: 2ch;
+}
+@media screen and (min-width: 640px) {
+  .cta__title {
+    text-align: left;
+    max-width: 50%;
+  }
 }
 .cta__button {
   border: 2px solid currentcolor;
@@ -352,8 +368,12 @@ main {
   color: hsl(0deg, 0%, 98%);
   text-transform: uppercase;
   letter-spacing: 0.2ch;
-  margin: 1rem auto 0 auto;
+  margin-top: 1rem;
   cursor: pointer;
+}
+.cta__button:hover {
+  color: hsl(256deg, 26%, 20%);
+  background-color: hsl(0deg, 0%, 98%);
 }
 
 .footer {
