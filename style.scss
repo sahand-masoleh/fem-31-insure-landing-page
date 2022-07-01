@@ -399,14 +399,27 @@ main {
 	background-color: $fc-very-light-gray;
 	background-image: url(./images/bg-pattern-footer-mobile.svg);
 	background-size: 100% auto;
-	background-position: top;
+	background-position: top left;
 	background-repeat: no-repeat;
 	@include flex-column-center;
 	gap: $gap-1-5;
 
+	@media screen and (min-width: 640px) {
+		background-image: url(./images/bg-pattern-footer-desktop.svg);
+		background-size: unset;
+		gap: $gap-3;
+	}
+
 	&__top {
 		@include flex-column-center;
 		gap: $gap-1-5;
+
+		@media screen and (min-width: 640px) {
+			max-width: $max-width;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+		}
 	}
 
 	&__socials {
@@ -414,18 +427,51 @@ main {
 		gap: $gap-1;
 	}
 
+	.icon-container {
+		position: relative;
+		cursor: pointer;
+
+		&:hover::after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: black;
+			mix-blend-mode: overlay;
+		}
+	}
+
 	&__divider {
 		all: unset;
 		width: 100%;
-		border: 1px solid $bg-grayish-blue;
+		border: 1px solid #00000020;
 		border-right: none;
 		border-bottom: none;
+
+		@media screen and (min-width: 640px) {
+			max-width: $max-width;
+		}
+	}
+
+	&__bottom {
+		@media screen and (min-width: 640px) {
+			max-width: $max-width;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	&__list {
 		@include flex-column-center;
 		gap: $gap-1;
 		margin-bottom: $gap-3;
+
+		@media screen and (min-width: 640px) {
+			align-items: flex-start;
+		}
 	}
 
 	&__item {
@@ -433,6 +479,11 @@ main {
 		font-size: $fs-s;
 		text-transform: uppercase;
 		list-style: none;
+
+		&:not(:nth-of-type(1)):hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 
 		&:nth-of-type(1) {
 			color: $fc-dark-grayish-violet;
