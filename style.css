@@ -166,7 +166,8 @@ main {
 @media screen and (min-width: 640px) {
   .intro__text {
     width: 50%;
-    padding: 0 1.5rem;
+    padding: 0;
+    padding-right: 2rem;
     justify-content: center;
     align-items: flex-start;
   }
@@ -243,6 +244,15 @@ main {
   gap: 3rem;
   position: relative;
 }
+@media screen and (min-width: 640px) {
+  .content {
+    max-width: 70rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    margin: 0 1.5rem;
+  }
+}
 .content__title {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -250,11 +260,25 @@ main {
   font-size: 2.8rem;
   text-align: center;
 }
+@media screen and (min-width: 640px) {
+  .content__title {
+    flex-basis: 100%;
+    text-align: left;
+    font-size: clamp(2.8rem, 5vw, 4.4rem);
+  }
+}
 .content .feature {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+}
+@media screen and (min-width: 640px) {
+  .content .feature {
+    flex-basis: 30ch;
+    flex-grow: 1;
+    align-items: flex-start;
+  }
 }
 .content .feature__title {
   font-family: "DM Serif Display", serif;
@@ -262,6 +286,11 @@ main {
   color: hsl(270deg, 9%, 17%);
   font-size: 1.8rem;
   text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .content .feature__title {
+    text-align: left;
+  }
 }
 .content .feature__text {
   font-family: "Karla", sans-serif;
@@ -271,6 +300,11 @@ main {
   line-height: 3ch;
   text-align: center;
 }
+@media screen and (min-width: 640px) {
+  .content .feature__text {
+    text-align: left;
+  }
+}
 .content::before {
   position: absolute;
   content: "";
@@ -278,6 +312,12 @@ main {
   width: 50%;
   top: 0;
   background-color: hsl(216deg, 30%, 68%);
+}
+@media screen and (min-width: 640px) {
+  .content::before {
+    left: 0;
+    width: 15%;
+  }
 }
 
 .cta {
