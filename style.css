@@ -78,40 +78,6 @@ img {
     gap: 2rem;
   }
 }
-.nav__menu-button {
-  border: 2px solid currentcolor;
-  font-family: "Karla", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: hsl(0deg, 0%, 98%);
-  background: none;
-  width: 100%;
-  padding: 1.5ch 3ch;
-  margin-top: -1.5ch;
-  text-transform: uppercase;
-  letter-spacing: 0.2ch;
-  cursor: pointer;
-}
-@media screen and (min-width: 640px) {
-  .nav__menu-button {
-    margin-top: unset;
-    font-family: "Karla", sans-serif;
-    font-weight: 700;
-    color: hsl(273deg, 4%, 51%);
-    font-size: 0.9rem;
-    width: unset;
-  }
-}
-.nav__menu-button:hover {
-  color: hsl(256deg, 26%, 20%);
-  background-color: hsl(0deg, 0%, 98%);
-}
-@media screen and (min-width: 640px) {
-  .nav__menu-button:hover {
-    background-color: hsl(270deg, 9%, 17%);
-    color: hsl(0deg, 0%, 98%);
-  }
-}
 .nav__item {
   font-family: "Karla", sans-serif;
   font-weight: 700;
@@ -128,6 +94,38 @@ img {
   }
   .nav__item:hover {
     color: hsl(270deg, 9%, 17%);
+  }
+}
+.nav__menu-button {
+  border: 2px solid currentcolor;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(0deg, 0%, 98%);
+  background: none;
+  width: 100%;
+  padding: 1.5ch 3ch;
+  margin-top: -1.5ch;
+  text-transform: uppercase;
+  letter-spacing: 0.2ch;
+  cursor: pointer;
+}
+@media screen and (min-width: 640px) {
+  .nav__menu-button {
+    margin-top: unset;
+    color: hsl(270deg, 9%, 17%);
+    font-size: 0.9rem;
+    width: unset;
+  }
+}
+.nav__menu-button:hover {
+  color: hsl(256deg, 26%, 20%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+@media screen and (min-width: 640px) {
+  .nav__menu-button:hover {
+    background-color: hsl(270deg, 9%, 17%);
+    color: hsl(0deg, 0%, 98%);
   }
 }
 
@@ -246,7 +244,14 @@ main {
 }
 @media screen and (min-width: 640px) {
   .intro__text::after {
-    all: unset;
+    bottom: unset;
+    right: unset;
+    content: "";
+    height: 1px;
+    width: 25%;
+    top: 0;
+    left: 0;
+    background-color: hsl(0deg, 0%, 98%);
   }
 }
 .intro__title {

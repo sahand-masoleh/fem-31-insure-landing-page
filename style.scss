@@ -120,38 +120,6 @@ img {
 		}
 	}
 
-	&__menu-button {
-		border: 2px solid currentcolor;
-		@include f-body-400;
-		font-size: $fs-l;
-		color: $fc-very-light-gray;
-		background: none;
-		width: 100%;
-		padding: 1.5ch 3ch;
-		margin-top: -1.5ch;
-		text-transform: uppercase;
-		letter-spacing: 0.2ch;
-		cursor: pointer;
-
-		@media screen and (min-width: 640px) {
-			margin-top: unset;
-			@include f-body-700;
-			color: $fc-dark-grayish-violet;
-			font-size: $fs-s;
-			width: unset;
-		}
-
-		&:hover {
-			color: $bg-dark-violet;
-			background-color: $fc-very-light-gray;
-
-			@media screen and (min-width: 640px) {
-				background-color: $fc-very-dark-violet;
-				color: $fc-very-light-gray;
-			}
-		}
-	}
-
 	&__item {
 		@include f-body-700;
 		font-size: $fs-l;
@@ -166,6 +134,37 @@ img {
 
 			&:hover {
 				color: $fc-very-dark-violet;
+			}
+		}
+	}
+
+	&__menu-button {
+		border: 2px solid currentcolor;
+		@include f-body-700;
+		font-size: $fs-l;
+		color: $fc-very-light-gray;
+		background: none;
+		width: 100%;
+		padding: 1.5ch 3ch;
+		margin-top: -1.5ch;
+		text-transform: uppercase;
+		letter-spacing: 0.2ch;
+		cursor: pointer;
+
+		@media screen and (min-width: 640px) {
+			margin-top: unset;
+			color: $fc-very-dark-violet;
+			font-size: $fs-s;
+			width: unset;
+		}
+
+		&:hover {
+			color: $bg-dark-violet;
+			background-color: $fc-very-light-gray;
+
+			@media screen and (min-width: 640px) {
+				background-color: $fc-very-dark-violet;
+				color: $fc-very-light-gray;
 			}
 		}
 	}
@@ -273,7 +272,14 @@ main {
 			right: 0;
 
 			@media screen and (min-width: 640px) {
-				all: unset;
+				bottom: unset;
+				right: unset;
+				content: "";
+				height: 1px;
+				width: 25%;
+				top: 0;
+				left: 0;
+				background-color: $fc-very-light-gray;
 			}
 		}
 	}
