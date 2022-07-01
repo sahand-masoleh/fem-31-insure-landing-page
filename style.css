@@ -16,11 +16,17 @@ img {
   display: none !important;
 }
 
-.nav-container {
-  padding: 0 1.5rem;
+.no-scroll {
+  overflow: hidden;
+}
+@media screen and (min-width: 640px) {
+  .no-scroll {
+    overflow: unset;
+  }
 }
 
 .nav {
+  padding: 0 1.5rem;
   max-width: 70rem;
   margin: 0 auto;
   height: 5rem;
@@ -34,7 +40,12 @@ img {
   background: none;
   cursor: pointer;
 }
-.nav__menu {
+@media screen and (min-width: 640px) {
+  .nav__button {
+    display: none;
+  }
+}
+.nav__menu--mobile {
   position: absolute;
   top: 100%;
   left: 0;
@@ -52,15 +63,54 @@ img {
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
+@media screen and (min-width: 640px) {
+  .nav__menu--mobile {
+    display: none;
+  }
+}
+.nav__menu--desktop {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .nav__menu--desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
 .nav__menu-button {
   border: 2px solid currentcolor;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
   color: hsl(0deg, 0%, 98%);
   background: none;
   width: 100%;
   padding: 1.5ch 3ch;
+  margin-top: -1.5ch;
   text-transform: uppercase;
   letter-spacing: 0.2ch;
   cursor: pointer;
+}
+@media screen and (min-width: 640px) {
+  .nav__menu-button {
+    margin-top: unset;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    color: hsl(273deg, 4%, 51%);
+    font-size: 0.9rem;
+    width: unset;
+  }
+}
+.nav__menu-button:hover {
+  color: hsl(256deg, 26%, 20%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+@media screen and (min-width: 640px) {
+  .nav__menu-button:hover {
+    background-color: hsl(270deg, 9%, 17%);
+    color: hsl(0deg, 0%, 98%);
+  }
 }
 .nav__item {
   font-family: "Karla", sans-serif;
@@ -69,14 +119,24 @@ img {
   text-transform: uppercase;
   color: hsl(0deg, 0%, 98%);
   list-style: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 640px) {
+  .nav__item {
+    color: hsl(273deg, 4%, 51%);
+    font-size: 0.9rem;
+  }
+  .nav__item:hover {
+    color: hsl(270deg, 9%, 17%);
+  }
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
-  margin-bottom: 5rem;
+  gap: 8rem;
+  margin-bottom: 8rem;
 }
 
 .intro-container {
@@ -337,6 +397,7 @@ main {
 @media screen and (min-width: 640px) {
   .cta {
     background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-size: auto 100%;
     flex-direction: row;
     justify-content: space-between;
     padding: 5rem;
@@ -378,6 +439,7 @@ main {
 
 .footer {
   padding: 5rem 1.5rem;
+  padding-bottom: 0;
   background-color: hsl(0deg, 0%, 98%);
   background-image: url(./images/bg-pattern-footer-mobile.svg);
   background-size: 100% auto;
@@ -466,11 +528,11 @@ main {
   text-transform: uppercase;
   list-style: none;
 }
-.footer__item:not(:nth-of-type(1)):hover {
+.footer__item--rest:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.footer__item:nth-of-type(1) {
+.footer__item--first {
   color: hsl(273deg, 4%, 51%);
   margin-bottom: 1.5rem;
 }
@@ -478,7 +540,7 @@ main {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   color: hsl(273deg, 4%, 51%);
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   text-align: center;
 }
 .footer__attribution > a {

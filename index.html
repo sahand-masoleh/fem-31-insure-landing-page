@@ -11,23 +11,25 @@
 
 <body>
 
-  <div class="nav-container">
-    <nav class="nav">
-      <img src="./images/logo.svg" alt="insure logo" class="nav__logo">
-      <button class="nav__button">
-        <img class="hamburger--open" src="./images/icon-hamburger.svg" alt="">
-        <img class="hamburger--close hidden" src="./images/icon-close.svg" alt="">
-      </button>
-      <ul class="nav__menu hidden">
-        <li class="nav__item">How we work</li>
-        <li class="nav__item">Blog</li>
-        <li class="nav__item">Account</li>
-        <button class="nav__menu-button">
-          <p class="nav__item">View plans</p>
-        </button>
-      </ul>
-    </nav>
-  </div>
+  <nav class="nav">
+    <img src="./images/logo.svg" alt="insure logo" class="nav__logo">
+    <button class="nav__button">
+      <img class="hamburger--open" src="./images/icon-hamburger.svg" alt="">
+      <img class="hamburger--close hidden" src="./images/icon-close.svg" alt="">
+    </button>
+    <ul class="nav__menu nav__menu--mobile hidden">
+      <li class="nav__item">How we work</li>
+      <li class="nav__item">Blog</li>
+      <li class="nav__item">Account</li>
+      <button class="nav__menu-button">View plans</button>
+    </ul>
+    <ul class="nav__menu nav__menu--desktop">
+      <li class="nav__item">How we work</li>
+      <li class="nav__item">Blog</li>
+      <li class="nav__item">Account</li>
+      <button class="nav__menu-button">View plans</button>
+    </ul>
+  </nav>
 
   <main class="main">
     <div class="intro-container">
@@ -94,30 +96,30 @@
     <hr class="footer__divider">
     <div class="footer__bottom">
       <ul class="footer__list">
-        <li class="footer__item">Our company</li>
-        <li class="footer__item">How we work</li>
-        <li class="footer__item">Why Insure?</li>
-        <li class="footer__item">View plans</li>
-        <li class="footer__item">Reviews</li>
+        <li class="footer__item footer__item--first">Our company</li>
+        <li class="footer__item footer__item--rest">How we work</li>
+        <li class="footer__item footer__item--rest">Why Insure?</li>
+        <li class="footer__item footer__item--rest">View plans</li>
+        <li class="footer__item footer__item--rest">Reviews</li>
       </ul>
       <ul class="footer__list">
-        <li class="footer__item">Help me</li>
-        <li class="footer__item">FAQ</li>
-        <li class="footer__item">Terms of use</li>
-        <li class="footer__item">Privacy policy</li>
-        <li class="footer__item">Cookies</li>
+        <li class="footer__item footer__item--first">Help me</li>
+        <li class="footer__item footer__item--rest">FAQ</li>
+        <li class="footer__item footer__item--rest">Terms of use</li>
+        <li class="footer__item footer__item--rest">Privacy policy</li>
+        <li class="footer__item footer__item--rest">Cookies</li>
       </ul>
       <ul class="footer__list">
-        <li class="footer__item">Contact</li>
-        <li class="footer__item">Sales</li>
-        <li class="footer__item">Support</li>
-        <li class="footer__item">Live chat</li>
+        <li class="footer__item footer__item--first">Contact</li>
+        <li class="footer__item footer__item--rest">Sales</li>
+        <li class="footer__item footer__item--rest">Support</li>
+        <li class="footer__item footer__item--rest">Live chat</li>
       </ul>
       <ul class="footer__list">
-        <li class="footer__item">Others</li>
-        <li class="footer__item">Careers</li>
-        <li class="footer__item">Press</li>
-        <li class="footer__item">Licenses</li>
+        <li class="footer__item footer__item--first">Others</li>
+        <li class="footer__item footer__item--rest">Careers</li>
+        <li class="footer__item footer__item--rest">Press</li>
+        <li class="footer__item footer__item--rest">Licenses</li>
       </ul>
     </div>
     <div class="footer__attribution">

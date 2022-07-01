@@ -5,11 +5,11 @@ navButton.addEventListener("click", handleMenu);
 const hamburgerOpen = document.querySelector(".hamburger--open");
 const hamburgerClose = document.querySelector(".hamburger--close");
 
-const navMenu = document.querySelector(".nav__menu");
+const navMenu = document.querySelector(".nav__menu--mobile");
 
 function handleMenu() {
 	navMenu.classList.toggle("hidden");
 	hamburgerOpen.classList.toggle("hidden");
 	hamburgerClose.classList.toggle("hidden");
-	body.style.overflow = body.style.overflow === "hidden" ? "unset" : "hidden";
+	body.classList.toggle("no-scroll");
 }
